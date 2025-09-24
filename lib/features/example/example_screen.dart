@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter_screens/features/auth/login_screen.dart';
+import 'package:flutter_starter_screens/features/auth/otp_screen.dart';
+import 'package:flutter_starter_screens/features/auth/pin_screen.dart';
+import 'package:flutter_starter_screens/features/auth/register_screen.dart';
+import 'package:flutter_starter_screens/features/consent/consent_screen.dart';
+import 'package:flutter_starter_screens/features/home/home_screen.dart';
+import 'package:flutter_starter_screens/features/setting/setting_screen.dart';
 import 'package:flutter_starter_screens/features/splash/splash_screen.dart';
 
 class ExampleScreen extends StatelessWidget {
@@ -30,7 +37,7 @@ class ExampleScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const EmptyPage()),
+                          builder: (context) => const LoginScreen()),
                     );
                   },
                   child: const Text('Login Screen')),
@@ -39,25 +46,16 @@ class ExampleScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const EmptyPage()),
+                          builder: (context) => const RegisterScreen()),
                     );
                   },
-                  child: const Text('Regiter Screen')),
+                  child: const Text('Register Screen')),
               FilledButton(
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const EmptyPage()),
-                    );
-                  },
-                  child: const Text('Consent Screen')),
-              FilledButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const EmptyPage()),
+                          builder: (context) => const OtpScreen()),
                     );
                   },
                   child: const Text('OTP Screen')),
@@ -66,7 +64,7 @@ class ExampleScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const EmptyPage()),
+                          builder: (context) => const PinScreen()),
                     );
                   },
                   child: const Text('PIN Screen')),
@@ -75,7 +73,16 @@ class ExampleScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const EmptyPage()),
+                          builder: (context) => const ConsentScreen()),
+                    );
+                  },
+                  child: const Text('Consent Screen')),
+              FilledButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const HomeScreen()),
                     );
                   },
                   child: const Text('Home Screen')),
@@ -84,7 +91,7 @@ class ExampleScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const EmptyPage()),
+                          builder: (context) => const SettingScreen()),
                     );
                   },
                   child: const Text('Setting Screen')),
@@ -96,16 +103,7 @@ class ExampleScreen extends StatelessWidget {
                           builder: (context) => const EmptyPage()),
                     );
                   },
-                  child: const Text('Menu Screen')),
-              FilledButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const EmptyPage()),
-                    );
-                  },
-                  child: const Text('Detail Screen')),
+                  child: const Text('Select Screen')),
             ],
           ),
         ),
