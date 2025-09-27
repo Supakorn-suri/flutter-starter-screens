@@ -27,7 +27,7 @@ class LoginScreen extends StatelessWidget {
                 margin: const EdgeInsets.all(24),
                 color: Colors.white,
                 shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(8)),
+                  borderRadius: BorderRadius.all(Radius.circular(24)),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(24),
@@ -40,30 +40,93 @@ class LoginScreen extends StatelessWidget {
                           image: AssetImage('assets/images/logo.png'),
                           height: 60,
                         ),
+                        const SizedBox(height: 24),
                         const Text(
                           'Email',
                           style: TextStyle(
-                            fontSize: 16,
+                            fontSize: 14,
                           ),
                         ),
-                        const SizedBox(height: 6),
-                        TextFormField(
+                        const SizedBox(height: 8),
+                        TextField(
                           onChanged: (value) {},
                         ),
-                        const Text(
-                          'Password',
-                          style: TextStyle(
-                            fontSize: 16,
+                        const SizedBox(height: 8),
+                        const Row(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Password',
+                              style: TextStyle(
+                                fontSize: 14,
+                              ),
+                            ),
+                            InkWell(
+                              child: Text(
+                                'Forgot password?',
+                                style: TextStyle(
+                                  shadows: [
+                                    Shadow(
+                                        color: Color(0xFF8532FF),
+                                        offset: Offset(0, -2))
+                                  ],
+                                  color: Colors.transparent,
+                                  decoration: TextDecoration.underline,
+                                  decorationColor: Color(0xFF8532FF),
+                                  fontSize: 10,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 8),
+                        TextField(
+                          onChanged: (value) {},
+                          decoration: const InputDecoration(
+                            suffixIcon: Align(
+                                widthFactor: 1.0,
+                                heightFactor: 1.0,
+                                child: Icon(Icons.visibility_off)),
                           ),
                         ),
-                        const SizedBox(height: 6),
-                        TextFormField(
-                          onChanged: (value) {},
-                        ),
+                        const SizedBox(height: 24),
                         TextButton(
-                            onPressed: () {}, child: const Text('Login')),
+                            style: TextButton.styleFrom(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 16, vertical: 12),
+                              backgroundColor: const Color(0xFF8532FF),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                            ),
+                            onPressed: () {},
+                            child: const Text(
+                              'Login',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold),
+                            )),
+                        const SizedBox(height: 16),
                         OutlinedButton(
-                            onPressed: () {}, child: const Text('Register')),
+                            style: OutlinedButton.styleFrom(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 16, vertical: 12),
+                              side: const BorderSide(
+                                  width: 1, color: Color(0xFFE6E6E6)),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                            ),
+                            onPressed: () {},
+                            child: const Text(
+                              'Register',
+                              style: TextStyle(
+                                  color: Color(0xFF8532FF),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold),
+                            )),
                       ]),
                 ),
               ),
