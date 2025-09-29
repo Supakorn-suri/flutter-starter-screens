@@ -7,20 +7,24 @@ class SettingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Settings')),
+      appBar: AppBar(
+          title: const Text(
+        'Setting',
+        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+      )),
       body: SettingsList(
         sections: [
           SettingsSection(
-            title: Text('General'),
+            title: const Text('General'),
             tiles: [
               SettingsTile.navigation(
-                leading: Icon(Icons.language),
-                title: Text('Language'),
-                value: Text('English'),
+                leading: const Icon(Icons.language),
+                title: const Text('Language'),
+                value: const Text('English'),
                 onPressed: (context) {
                   // navigate to language selection
                 },
-                description: Text(
+                description: const Text(
                     'Select your preferred language for the app interface.'),
               ),
               SettingsTile.switchTile(
@@ -28,12 +32,12 @@ class SettingScreen extends StatelessWidget {
                   // toggle dark mode / custom theme
                 },
                 initialValue: true,
-                leading: Icon(Icons.dark_mode),
-                title: Text('Dark Mode'),
+                leading: const Icon(Icons.dark_mode),
+                title: const Text('Dark Mode'),
               ),
               SettingsTile(
-                title: Text('Theme Color'),
-                leading: Icon(Icons.palette),
+                title: const Text('Theme Color'),
+                leading: const Icon(Icons.palette),
                 trailing: DropdownButton<String>(
                   onChanged: (value) {},
                   items: <String>['Blue', 'Red', 'Green', 'Purple']
@@ -46,8 +50,8 @@ class SettingScreen extends StatelessWidget {
                 ),
               ),
               SettingsTile(
-                title: Text('Text Size'),
-                leading: Icon(Icons.text_fields),
+                title: const Text('Text Size'),
+                leading: const Icon(Icons.text_fields),
                 trailing: Slider(
                   min: 0.5,
                   max: 2.0,
@@ -59,46 +63,45 @@ class SettingScreen extends StatelessWidget {
             ],
           ),
           SettingsSection(
-            title: Text('Notifications'),
+            title: const Text('Notifications'),
             tiles: [
               SettingsTile.switchTile(
                 onToggle: (value) {},
                 initialValue: true,
-                leading: Icon(Icons.notifications),
-                title: Text('App Notifications'),
+                leading: const Icon(Icons.notifications),
+                title: const Text('App Notifications'),
               ),
               SettingsTile.switchTile(
                 onToggle: (value) {},
                 initialValue: true,
-                leading: Icon(Icons.volume_up),
-                title: Text('Notification Sound'),
+                leading: const Icon(Icons.volume_up),
+                title: const Text('Notification Sound'),
               ),
               SettingsTile.switchTile(
                 onToggle: (value) {},
                 initialValue: false,
-                leading: Icon(Icons.vibration),
-                title: Text('Vibration'),
+                leading: const Icon(Icons.vibration),
+                title: const Text('Vibration'),
               ),
             ],
           ),
           SettingsSection(
-            title: Text('Account'),
+            title: const Text('Account'),
             tiles: [
               SettingsTile.navigation(
-                leading: Icon(Icons.person),
-                title: Text('Profile'),
+                leading: const Icon(Icons.person),
+                title: const Text('Profile'),
                 onPressed: (context) {},
               ),
               SettingsTile.navigation(
-                leading: Icon(Icons.lock),
-                title: Text('Privacy & Security'),
+                leading: const Icon(Icons.lock),
+                title: const Text('Privacy & Security'),
                 onPressed: (context) {},
                 description:
-                    Text('Manage privacy settings and security options.'),
+                    const Text('Manage privacy settings and security options.'),
               ),
             ],
           ),
-          
         ],
       ),
     );
