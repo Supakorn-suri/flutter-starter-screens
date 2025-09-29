@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
+          primaryColor: const Color(0xFF8532FF),
           filledButtonTheme: FilledButtonThemeData(
             style: FilledButton.styleFrom(
               minimumSize: const Size(300, 50),

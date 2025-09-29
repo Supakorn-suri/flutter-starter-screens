@@ -95,32 +95,9 @@ class ExampleScreen extends StatelessWidget {
                     );
                   },
                   child: const Text('Setting Screen')),
-              FilledButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const EmptyPage()),
-                    );
-                  },
-                  child: const Text('Select Screen')),
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class EmptyPage extends StatelessWidget {
-  const EmptyPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Empty Page")),
-      body: const Center(
-        child: Text("This is an empty page"),
       ),
     );
   }
