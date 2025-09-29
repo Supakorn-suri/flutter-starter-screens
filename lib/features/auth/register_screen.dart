@@ -6,35 +6,41 @@ class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Register Screen")),
+      appBar: AppBar(
+          title: const Text(
+        "Profile",
+        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+      )),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(24),
+          padding: const EdgeInsets.all(24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 'First name',
                 style: TextStyle(
                   fontSize: 14,
                 ),
               ),
+              const SizedBox(height: 8),
               TextFormField(
                 onChanged: (value) {},
               ),
               const SizedBox(height: 16),
-              Text(
+              const Text(
                 'Last name',
                 style: TextStyle(
                   fontSize: 14,
                 ),
               ),
+              const SizedBox(height: 8),
               TextFormField(
                 onChanged: (value) {},
               ),
               const SizedBox(height: 16),
-              Text(
+              const Text(
                 'Brith Date',
                 style: TextStyle(
                   fontSize: 14,
@@ -42,9 +48,15 @@ class RegisterScreen extends StatelessWidget {
               ),
               TextFormField(
                 onChanged: (value) {},
+                decoration: const InputDecoration(
+                  suffixIcon: Align(
+                      widthFactor: 1.0,
+                      heightFactor: 1.0,
+                      child: Icon(Icons.calendar_month)),
+                ),
               ),
               const SizedBox(height: 16),
-              Text(
+              const Text(
                 'Gender',
                 style: TextStyle(
                   fontSize: 14,
@@ -54,7 +66,7 @@ class RegisterScreen extends StatelessWidget {
                 onChanged: (value) {},
               ),
               const SizedBox(height: 16),
-              Text(
+              const Text(
                 'Mobile Number',
                 style: TextStyle(
                   fontSize: 14,
@@ -64,7 +76,7 @@ class RegisterScreen extends StatelessWidget {
                 onChanged: (value) {},
               ),
               const SizedBox(height: 16),
-              Text(
+              const Text(
                 'Email',
                 style: TextStyle(
                   fontSize: 14,
@@ -74,7 +86,7 @@ class RegisterScreen extends StatelessWidget {
                 onChanged: (value) {},
               ),
               const SizedBox(height: 16),
-              Text(
+              const Text(
                 'Password',
                 style: TextStyle(
                   fontSize: 14,
@@ -84,7 +96,7 @@ class RegisterScreen extends StatelessWidget {
                 onChanged: (value) {},
               ),
               const SizedBox(height: 16),
-              Text(
+              const Text(
                 'Confirm Password',
                 style: TextStyle(
                   fontSize: 14,
@@ -111,7 +123,7 @@ class RegisterScreen extends StatelessWidget {
             ),
             backgroundColor: Theme.of(context).primaryColor,
           ),
-          child: Text(
+          child: const Text(
             'Next',
             style: TextStyle(
                 fontSize: 16, fontWeight: FontWeight.w700, color: Colors.white),
