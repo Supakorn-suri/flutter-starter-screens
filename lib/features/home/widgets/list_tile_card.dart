@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class ListTileCard extends StatelessWidget {
   final String title;
   final String? subtitle;
-  // final String svgPath;
   final IconData leadingIcon;
 
   final VoidCallback onTap;
@@ -14,7 +13,6 @@ class ListTileCard extends StatelessWidget {
     required this.title,
     this.subtitle,
     required this.leadingIcon,
-    // required this.svgPath
   });
 
   @override

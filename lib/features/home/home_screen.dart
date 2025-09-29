@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("Home Screen")),
       body: Padding(
-        padding: EdgeInsets.all(24),
+        padding: const EdgeInsets.all(24),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,7 +34,8 @@ class HomeScreen extends StatelessWidget {
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8.0),
                     child: ClipRRect(
-                      borderRadius: BorderRadius.all(Radius.circular(12.0)),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(12.0)),
                       child: Image.network(
                         item,
                         fit: BoxFit.cover,
@@ -44,16 +45,17 @@ class HomeScreen extends StatelessWidget {
                   );
                 }).toList(),
               ),
-              SizedBox(height: 16),
-              Text('Title',
+              const SizedBox(height: 16),
+              const Text('Title',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               SizedBox(
                 height: 68,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   itemCount: 8,
-                  separatorBuilder: (context, index) => SizedBox(width: 12),
+                  separatorBuilder: (context, index) =>
+                      const SizedBox(width: 12),
                   itemBuilder: (context, index) {
                     final items = [
                       {'text': 'Search', 'icon': Icons.search},
@@ -73,25 +75,24 @@ class HomeScreen extends StatelessWidget {
                   },
                 ),
               ),
-              SizedBox(height: 16),
-                Text('Title',
+              const SizedBox(height: 16),
+              const Text('Title',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               ListTileCard(
                   leadingIcon: Icons.list,
                   title: 'List Tile Card',
                   subtitle: 'Basic component sample.',
                   onTap: () {}),
-                  ListTileCard(
+              ListTileCard(
                   leadingIcon: Icons.list,
                   title: 'List Tile Card',
                   subtitle: 'Basic component sample.',
                   onTap: () {}),
-              SizedBox(height: 16),
-            
-              Text('Title',
+              const SizedBox(height: 16),
+              const Text('Title',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               Card(
                 elevation: 2,
                 shape: RoundedRectangleBorder(
@@ -234,7 +235,7 @@ class CustomMenuCard extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: const BorderRadius.all(Radius.circular(8)),
-            border: Border.all(color: Color(0xFFD9D9D9)),
+            border: Border.all(color: const Color(0xFFD9D9D9)),
           ),
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             Icon(icon),
